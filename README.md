@@ -1,6 +1,5 @@
 <H1>Dat158</H1>
-
-I ditta prosjektet tar vi for oss kaggle konkurransen som går ut på å forutsee hvor mye en film tjener på kino.
+<H4>"Playing the whole game"</H4>
   
-Link til konkurransen: https://www.kaggle.com/c/tmdb-box-office-prediction
-
+Box office prediction.
+Link to the Kaggle competition: https://www.kaggle.com/c/tmdb-box-office-prediction
