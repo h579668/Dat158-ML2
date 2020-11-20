@@ -8,7 +8,7 @@ import joblib
 #######
 
 model = joblib.load('Dat158-ML2/filmApp/app/models/appModel.joblib')
-
+pip = joblib.load('app/models/pipeline.joblib'')
 
 def preprocess(data):
     """
@@ -42,8 +42,8 @@ def preprocess(data):
         'genres': 'Drama',
         'original_language': 'En',
         'popularity': 8.12467,
-        'production_companies': 'Disney',
-        'production_countries': 'USA',
+       # 'production_companies': 'Disney',
+        #'production_countries': 'USA',
         'release_date': '01/01/21',
         'cast': None,
         'runtime': 104,
@@ -56,7 +56,10 @@ def preprocess(data):
     for key in [k for k in data.keys() if k in feature_values.keys()]:
         feature_values[key] = data[key]
 
-    return feature_values
+    X_df = pd.DataFrame.from_records([feature_values])
+    X_prepared_values = pipeline.transform(X_df)
+
+    return X_prepared_values
 
 
 
@@ -74,7 +77,6 @@ def predict(data):
 
     column_order = ['belongs_to_collection', 'budget', 'genres',
       'original_language','popularity',
-       'production_companies', 'production_countries', 
        'release_date','runtime', 'spoken_language','cast'
         ]
 

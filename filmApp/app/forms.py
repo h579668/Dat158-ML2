@@ -11,17 +11,21 @@ class DataForm(FlaskForm):
     are set to default values in `predict.py`).
     """
 
-    collection = StringField('Name of collection', validators=[DataRequired()])
-    budget = IntegerField('What is the budget', validators=[NumberRange(min=0, max=100000000)])
+    collection = BooleanField('Is the movie a part of a collection?')
+    budget = IntegerField('What is the budget', validators=[DataRequired])
    
-    genres = StringField('Name of the genre')
+    genres = SelectField('Select name of the genre', 
+            choices=[(35,'Comedy'),(18, 'Drama'), (80,'Crime'),(53,'Thriller')])
+    
     original_Language= StringField('Enter the two first numbers of the language')
+    
     popularity = FloatField('what is the popularity of the film?')
 
-    production_companies = StringField('Name of the production_companies')
-    production_countries = StringField('Name of the production countries')
+  # production_companies = StringField('Name of the production_companies')
+   # production_countries = StringField('Name of the production countries')
     
     release_date = StringField('Release date -> dd/mm/yy')
+    
     cast = StringField('Id and Names of the cast')
 
     runtime = FloatField('Runtime of the movie')
