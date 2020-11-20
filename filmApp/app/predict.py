@@ -7,8 +7,8 @@ import joblib
 # `../nbs/1.0-asl-train_model.ipynb`
 #######
 
-model = joblib.load('Dat158-ML2/filmApp/app/models/appModel.joblib')
-pip = joblib.load('app/models/pipeline.joblib'')
+model = joblib.load('app/models/filmAppmodel.joblib')
+pip = joblib.load('app/models/pipeline.joblib')
 
 def preprocess(data):
     """

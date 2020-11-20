@@ -12,7 +12,7 @@ class DataForm(FlaskForm):
     """
 
     collection = BooleanField('Is the movie a part of a collection?')
-    budget = IntegerField('What is the budget', validators=[DataRequired])
+    budget = IntegerField('What is the budget', validators=[DataRequired()])
    
     genres = SelectField('Select name of the genre', 
             choices=[(35,'Comedy'),(18, 'Drama'), (80,'Crime'),(53,'Thriller')])
