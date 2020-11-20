@@ -8,7 +8,7 @@ import joblib
 #######
 
 model = joblib.load('app/models/filmAppmodel.joblib')
-pip = joblib.load('app/models/pipeline.joblib')
+pipeline = joblib.load('app/models/pipeline.joblib')
 
 def preprocess(data):
     """
