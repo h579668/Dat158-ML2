@@ -88,7 +88,6 @@ def predict(data):
     # predicting with the trained model. This can be achieved by saving an entire 
     # sckikit-learn pipeline, for example using joblib as in the notebook.
     
-
     pred = model.predict(data.reshape(1,-1))
 
     uncertainty = model.predict_proba(data.reshape(1,-1))

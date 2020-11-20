@@ -1,7 +1,7 @@
 {% extends "bootstrap/base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-{% block title %}HospitalApp{% endblock %}
+{% block title %}FilmApp{% endblock %}
 
 {% block navbar %}
 <div class="navbar navbar-inverse" role="navigation">
@@ -13,7 +13,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url_for('index') }}">HospitalApp</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">FilmApp</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -29,7 +29,7 @@
 {% block content %}
 
 <div class='container'>
-    <p>Predict a patient's length of stay in the hospital by filling out the below information. The data is fed to a 
+    <p>Predict the revenue of a film by filling out the below information. The data is fed to a 
         machine learning model trained on historical data.</p>
 </div>
 
