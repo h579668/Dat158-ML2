@@ -7,7 +7,7 @@ Box office prediction. This is a Kaggle competition were we are presented with m
 Link to the Kaggle competition: https://www.kaggle.com/c/tmdb-box-office-prediction
 </p>
 <p>
-During this project we will use the eight steps in Appendix B:
+During this project we will use the eight steps from Appendix B:
 </p>
 <p>
 1. Look at the big picture.<br>
@@ -39,7 +39,9 @@ There are two ways to measure performans: Root Mean Square Error (RMSE) and Mean
 <p>
 In this project we will use the RMSE as performance measure.
 </p>
-<p>Her skal det ligge bilde av RMSE</p>
+<body><img src="file:///Users/andrinesm/Desktop/Skjermbilde%202020-11-20%20kl.%2016.38.55.png" alt="RMSE" width="200"
+         height="80">
+ </body>
  <p>
 X is a matrix containing all the feature values (excluding labels) of all instances in the dataset. <br>
 h is your system’s prediction function, also called a hypothesis.<br>
@@ -49,4 +51,16 @@ y^(i) is its label (the desired output value for that instance).<br>
 RMSE(X,h) is the cost function measured on the set of examples using your hypothesis h.<br>
 </p>
 <h3>  7. Present your solution. </h3>
+<p>
+In our project we have followed 8 steps and at the end made a deployment. The focus in this project was to finish a deployment. Therefore we have done the most efficient way to prepare the data. We have for example dropped alot of features that maybe is more important to the revenue than we thought. Anyways we have chosen to focus on the features we found most important: belongs to collection, budget, genres, original language, popularity, release date and runtime. 
+</p>
+<p>
+After testing the data on several models, we chose to use the Forest Regressor. This because it gave us the best result.
+</p>
 <h3>  8. Launch, monitor, and maintain your system. </h3>
+<p>
+ Since we have made a deplyment, there is important to update and maintain the model, in order to prevent it from becoming outdated. The data sources should be connected to the system and it should be tested. In the future other features could be more important as well.
+</p>
+<p>
+It would be necessary to write a monitoring code to keeep track of the system performence. It requires human evaluation, because if the predictions are all wrong, then the code need to be checked and possible edited. To make the best possible predictions, it is important to evaluate the input data quality. Later on it would be possible to use feedback from the users in order to update the model, and also online algorithms.
+</p>
