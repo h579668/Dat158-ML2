@@ -7,8 +7,8 @@ import joblib
 # `../nbs/1.0-asl-train_model.ipynb`
 #######
 
-model = joblib.load('app/models/filmAppmodel.joblib')
-pipeline = joblib.load('app/models/pipeline.joblib')
+model = joblib.load('filmApp/app/models/filmAppmodel.joblib')
+pipeline = joblib.load('filmApp/app/models/pipeline.joblib')
 
 def preprocess(data):
     """
@@ -40,14 +40,14 @@ def preprocess(data):
         'belongs_to_collection': 0,
         'budget': 8000000,
         'genres': 'Drama',
-        'original_language': 'En',
+        'original_language': 0,
         'popularity': 8.12467,
        # 'production_companies': 'Disney',
         #'production_countries': 'USA',
-        'release_date': '01/01/21',
-        'cast': None,
+        'release_date': 0,
+        #'cast': None,
         'runtime': 104,
-        'spoken_language': 'English',
+        #'spoken_language': 0,
     }
 
 
@@ -57,7 +57,7 @@ def preprocess(data):
         feature_values[key] = data[key]
 
     X_df = pd.DataFrame.from_records([feature_values])
-    X_prepared_values = pipeline.transform(X_df)
+    X_prepared_values = pipeline.predict(X_df)
 
     return X_prepared_values
 

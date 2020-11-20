@@ -17,20 +17,24 @@ class DataForm(FlaskForm):
     genres = SelectField('Select name of the genre', 
             choices=[(35,'Comedy'),(18, 'Drama'), (80,'Crime'),(53,'Thriller')])
     
-    original_Language= StringField('Enter the two first numbers of the language')
+    #original_Language= StringField('Enter the two first numbers of the language')
+    original_Language = SelectField('Select language', 
+            choices=[('en'),('fr'), ('ru'),('es')])
     
     popularity = FloatField('what is the popularity of the film?')
 
   # production_companies = StringField('Name of the production_companies')
    # production_countries = StringField('Name of the production countries')
     
-    release_date = StringField('Release date -> dd/mm/yy')
+    release_date = FloatField('Release year')
     
-    cast = StringField('Id and Names of the cast')
+    #cast = StringField('Id and Names of the cast')
 
     runtime = FloatField('Runtime of the movie')
 
-    spoken_language = StringField('What language is the movie in?')
+    
+    #spoken_language = SelectField('What language is the movie in?', 
+     #       choices=[('English'),('French'), ('Russian'),('Español')])
 
     submit = SubmitField('Submit')
 
