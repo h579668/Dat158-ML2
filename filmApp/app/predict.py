@@ -7,8 +7,8 @@ import joblib
 # `../nbs/1.0-asl-train_model.ipynb`
 #######
 
-model = joblib.load('filmApp/app/models/filmAppmodel.joblib')
-pipeline = joblib.load('filmApp/app/models/pipeline.joblib')
+model = joblib.load('Dat158-ML2/filmApp/app/models/filmAppmodel.joblib')
+pipeline = joblib.load('Dat158-ML2/filmApp/app/models/pip.joblib')
 
 def preprocess(data):
     """
@@ -57,7 +57,7 @@ def preprocess(data):
         feature_values[key] = data[key]
 
     X_df = pd.DataFrame.from_records([feature_values])
-    X_prepared_values = pipeline.predict(X_df)
+    X_prepared_values = pipeline.transform(X_df)
 
     return X_prepared_values
 
