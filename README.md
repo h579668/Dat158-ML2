@@ -3,9 +3,9 @@
 <p>  
 Box office prediction. This is a Kaggle competition were we are presented with metadata on over 7.000 past films from The Movie Database to try and predict their overall worldwide box office revenue.
 </p>
-<h4>
+<p>
 Link to the Kaggle competition: https://www.kaggle.com/c/tmdb-box-office-prediction
-<h4p>
+</p>
 <p>
 During this project we will use the eight steps in Appendix B:
 </p>
