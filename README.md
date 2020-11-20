@@ -39,6 +39,9 @@ There are two ways to measure performans: Root Mean Square Error (RMSE) and Mean
 <p>
 In this project we will use the RMSE as performance measure.
 </p>
+<body><img src="file:///Users/andrinesm/Desktop/Skjermbilde%202020-11-20%20kl.%2016.38.55.png" alt="RMSE" width="200"
+         height="80">
+ </body>
  <p>
 X is a matrix containing all the feature values (excluding labels) of all instances in the dataset. <br>
 h is your system’s prediction function, also called a hypothesis.<br>
